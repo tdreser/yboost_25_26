@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices de Debugging avec GitHub Copilot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐛 Exercices de Debugging</h1>
+            <p class="subtitle">Utilisez GitHub Copilot pour corriger et améliorer le code</p>
+        </header>
+
+        <div class="instructions">
+            <h2>📋 Instructions</h2>
+            <ul>
+                <li>Cliquez sur un bouton pour tester une fonction</li>
+                <li>Si le résultat est incorrect, ouvrez le fichier <code>exercises.js</code></li>
+                <li>Utilisez GitHub Copilot Chat pour identifier et corriger les bugs</li>
+                <li>Utilisez Copilot pour améliorer le code mal écrit</li>
+            </ul>
+        </div>
+
+        <!-- Exercice 1: Bug simple -->
+        <div class="exercise-card">
+            <div class="exercise-header">
+                <h3>Exercice 1: Calcul de la moyenne</h3>
+                <span class="difficulty easy">Facile</span>
+            </div>
+            <p class="description">
+                Cette fonction devrait calculer la moyenne d'un tableau de nombres.
+                Testez-la et corrigez le bug!
+            </p>
+            <div class="input-group">
+                <label for="input1">Entrez des nombres séparés par des virgules:</label>
+                <input type="text" id="input1" placeholder="Ex: 10, 20, 30, 40, 50" value="10, 20, 30, 40, 50">
+            </div>
+            <button onclick="testExercice1()" class="btn">Tester la fonction</button>
+            <div id="result1" class="result"></div>
+        </div>
+
+        <!-- Exercice 2: Code mal structuré -->
+        <div class="exercise-card">
+            <div class="exercise-header">
+                <h3>Exercice 2: Validation d'email</h3>
+                <span class="difficulty medium">Moyen</span>
+            </div>
+            <p class="description">
+                Cette fonction valide un email, mais le code est mal écrit et difficile à lire.
+                Améliorez sa lisibilité avec Copilot!
+            </p>
+            <div class="input-group">
+                <label for="input2">Entrez un email à valider:</label>
+                <input type="text" id="input2" placeholder="Ex: test@example.com" value="test@example.com">
+            </div>
+            <button onclick="testExercice2()" class="btn">Tester la fonction</button>
+            <div id="result2" class="result"></div>
+        </div>
+
+        <!-- Exercice 3: Boucle bugguée -->
+        <div class="exercise-card">
+            <div class="exercise-header">
+                <h3>Exercice 3: Recherche dans un tableau</h3>
+                <span class="difficulty easy">Facile</span>
+            </div>
+            <p class="description">
+                Cette fonction cherche si un élément existe dans un tableau.
+                Il y a un bug logique à trouver!
+            </p>
+            <div class="input-group">
+                <label for="input3">Entrez un élément à rechercher:</label>
+                <input type="text" id="input3" placeholder="Ex: banane" value="banane">
+            </div>
+            <button onclick="testExercice3()" class="btn">Tester la fonction</button>
+            <div id="result3" class="result"></div>
+        </div>
+
+        <!-- Exercice 4: Mauvaises pratiques -->
+        <div class="exercise-card">
+            <div class="exercise-header">
+                <h3>Exercice 4: Filtrer les nombres pairs</h3>
+                <span class="difficulty medium">Moyen</span>
+            </div>
+            <p class="description">
+                Cette fonction filtre les nombres pairs, mais utilise de mauvaises pratiques.
+                Refactorisez-la pour la rendre plus élégante!
+            </p>
+            <div class="input-group">
+                <label for="input4">Entrez des nombres séparés par des virgules:</label>
+                <input type="text" id="input4" placeholder="Ex: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10" value="1, 2, 3, 4, 5, 6, 7, 8, 9, 10">
+            </div>
+            <button onclick="testExercice4()" class="btn">Tester la fonction</button>
+            <div id="result4" class="result"></div>
+        </div>
+
+        <!-- Exercice 5: Bug complexe -->
+        <div class="exercise-card">
+            <div class="exercise-header">
+                <h3>Exercice 5: Tri de personnes par âge</h3>
+                <span class="difficulty hard">Difficile</span>
+            </div>
+            <p class="description">
+                Cette fonction trie un tableau de personnes par âge.
+                Plusieurs bugs se cachent dans le code!
+            </p>
+            <button onclick="testExercice5()" class="btn">Tester la fonction</button>
+            <div id="result5" class="result"></div>
+        </div>
+
+        <!-- Exercice 6: Code dupliqué -->
+        <div class="exercise-card">
+            <div class="exercise-header">
+                <h3>Exercice 6: Calculatrice de réduction</h3>
+                <span class="difficulty medium">Moyen</span>
+            </div>
+            <p class="description">
+                Cette fonction calcule des réductions, mais contient beaucoup de code dupliqué.
+                Optimisez-la avec Copilot!
+            </p>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="input6prix">Prix:</label>
+                    <input type="number" id="input6prix" placeholder="Ex: 100" value="100">
+                </div>
+                <div class="input-group">
+                    <label for="input6categorie">Catégorie:</label>
+                    <select id="input6categorie">
+                        <option value="etudiant">Étudiant</option>
+                        <option value="senior">Senior</option>
+                        <option value="enfant">Enfant</option>
+                        <option value="militaire">Militaire</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="testExercice6()" class="btn">Tester la fonction</button>
+            <div id="result6" class="result"></div>
+        </div>
+
+    </div>
+
+    <script src="exercises.js"></script>
+</body>
+</html>

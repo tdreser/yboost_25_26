@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Personnel - Portfolio Gamifié</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header avec navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Mon Portfolio</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section avec gamification -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-image-container">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Photo de profil" class="profile-image">
+                    <div class="level-badge">
+                        <span>Niveau <span id="user-level">1</span></span>
+                    </div>
+                </div>
+                <h2 class="fade-in">Bonjour, je suis <span class="highlight">John Doe</span></h2>
+                <p class="subtitle fade-in">Développeur Web Full Stack</p>
+                <div class="xp-bar-container fade-in">
+                    <div class="xp-label">
+                        <span>Expérience</span>
+                        <span id="xp-text">0/10000 XP</span>
+                    </div>
+                    <div class="xp-bar">
+                        <div class="xp-fill" id="xp-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="hero-stats fade-in">
+                    <div class="stat-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <span class="stat-value" data-target="42">0</span>
+                        <span class="stat-label">Projets</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-trophy"></i>
+                        <span class="stat-value" data-target="15">0</span>
+                        <span class="stat-label">Réalisations</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-code"></i>
+                        <span class="stat-value" data-target="8">0</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+                <button class="cta-button fade-in">Voir mon travail <i class="fas fa-arrow-down"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compteur de visites -->
+    <div class="visit-counter">
+        <i class="fas fa-eye"></i>
+        <span>Visites: <span id="visit-count">0</span></span>
+    </div>
+
+    <!-- Section À propos -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Passionné par le développement web depuis plusieurs années, je crée des expériences numériques modernes et performantes. Mon objectif est de transformer des idées en solutions concrètes et innovantes.</p>
+                    <p>Toujours à la recherche de nouveaux défis, j'aime apprendre de nouvelles technologies et partager mes connaissances avec la communauté.</p>
+                    <div class="achievements">
+                        <h3>Badges débloqués</h3>
+                        <div class="badges-container">
+                            <div class="badge" title="Maître du code">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="badge" title="Design expert">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="badge" title="Problème solver">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <div class="badge" title="Collaborateur">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="badge locked" title="Badge secret">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                    <span class="skill-percentage">88%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-node"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Git</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="82"></div>
+                    </div>
+                    <span class="skill-percentage">82%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+
+            <!-- Filtres -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <!-- Carrousel de projets -->
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" aria-label="Projet précédent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="projects-carousel">
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop" alt="Projet 1">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Application E-commerce</h3>
+                            <p>Une plateforme e-commerce complète avec panier, paiement et gestion des commandes.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                            <div class="project-xp">
+                                <i class="fas fa-star"></i>
+                                <span>+500 XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" alt="Projet 2">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Dashboard Analytique</h3>
+                            <p>Tableau de bord interactif avec visualisation de données en temps réel.</p>
+                            <div class="project-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Chart.js</span>
+                                <span class="tag">API REST</span>
+                            </div>
+                            <div class="project-xp">
+                                <i class="fas fa-star"></i>
+                                <span>+450 XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop" alt="Projet 3">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Application Mobile Fitness</h3>
+                            <p>Application de suivi d'entraînement avec plans personnalisés.</p>
+                            <div class="project-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Redux</span>
+                            </div>
+                            <div class="project-xp">
+                                <i class="fas fa-star"></i>
+                                <span>+600 XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="design">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop" alt="Projet 4">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Refonte UI/UX</h3>
+                            <p>Redesign complet d'une application bancaire avec focus sur l'accessibilité.</p>
+                            <div class="project-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Prototypage</span>
+                            </div>
+                            <div class="project-xp">
+                                <i class="fas fa-star"></i>
+                                <span>+400 XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop" alt="Projet 5">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Blog Personnel</h3>
+                            <p>Plateforme de blogging avec éditeur markdown et système de commentaires.</p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">MDX</span>
+                                <span class="tag">Tailwind</span>
+                            </div>
+                            <div class="project-xp">
+                                <i class="fas fa-star"></i>
+                                <span>+350 XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop" alt="Projet 6">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>App de Recettes</h3>
+                            <p>Application mobile pour découvrir et partager des recettes de cuisine.</p>
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                                <span class="tag">API</span>
+                            </div>
+                            <div class="project-xp">
+                                <i class="fas fa-star"></i>
+                                <span>+420 XP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" aria-label="Projet suivant">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Indicateurs du carrousel -->
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Envoyez-moi un message</h3>
+                    <p>Je suis toujours ouvert à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter !</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@exemple.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+33 6 12 34 56 78</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Paris, France</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="CodePen">
+                            <i class="fab fa-codepen"></i>
+                        </a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                        <span class="success-icon"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                        <span class="success-icon"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message"></span>
+                        <span class="success-icon"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message"></span>
+                        <span class="success-icon"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Message envoyé avec succès ! Vous avez gagné +50 XP</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 John Doe. Tous droits réservés.</p>
+            <p>Créé avec HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
